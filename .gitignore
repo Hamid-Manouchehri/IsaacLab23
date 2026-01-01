@@ -69,3 +69,4 @@ tests/
 
 # Docker history
 .isaac-lab-docker-history
+source/isaaclab_tasks/isaaclab_tasks/direct/ur5e_factory/agents/rl_games_ppo_cfg.yaml
