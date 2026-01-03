@@ -3,12 +3,17 @@
 #
 # SPDX-License-Identifier: BSD-3-Clause
 
+import pathlib
+
 import isaaclab.sim as sim_utils
 from isaaclab.assets import ArticulationCfg
 from isaaclab.utils import configclass
 from isaaclab.utils.assets import ISAACLAB_NUCLEUS_DIR
 
-ASSET_DIR = f"{ISAACLAB_NUCLEUS_DIR}/Factory"
+ASSET_DIR = f"{ISAACLAB_NUCLEUS_DIR}/Factory" # http://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/IsaacLab/Factory
+
+# Local USD directory (relative to this file)
+_LOCAL_USD_DIR = pathlib.Path(__file__).parent / "usd"
 
 
 @configclass
@@ -94,7 +99,9 @@ class Peg8mm(HeldAssetCfg):
 
 @configclass
 class Hole8mm(FixedAssetCfg):
-    usd_path = f"{ASSET_DIR}/factory_hole_8mm.usd"
+    # usd_path = f"{ASSET_DIR}/factory_hole_8mm.usd"
+    # Use local USD file (relative to this config file's directory)
+    usd_path = str(_LOCAL_USD_DIR / "test_factory_hole_8mm.usd")  # TODO
     diameter = 0.0081
     height = 0.025
     base_height = 0.0

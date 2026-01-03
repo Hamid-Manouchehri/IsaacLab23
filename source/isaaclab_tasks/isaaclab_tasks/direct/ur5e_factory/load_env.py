@@ -41,9 +41,6 @@ def main():
     # Create env directly (bypasses gym.make() issues)
     env = FactoryEnv(cfg=cfg, render_mode="rgb_array")
 
-    # print("✅ Factory env constructed")
-    # print("obs dim:", env.num_envs, " | state dim:", env.num_states, " | action dim:", env.num_actions)
-
     obs, _ = env.reset()
 
     # Zero action, just advance physics so you can visually verify assets
