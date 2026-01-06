@@ -50,7 +50,7 @@ params:
   load_path: ""
 
   config:
-    name: Factory
+    name: modified_Factory
     device: cuda:0
     full_experiment_name: test
     env_name: rlgpu
@@ -71,7 +71,7 @@ params:
     schedule_type: standard
     kl_threshold: 0.008
     score_to_win: 20000
-    max_epochs: 100
+    max_epochs: 100               # TODO
     save_best_after: 10
     save_frequency: 100
     print_stats: True

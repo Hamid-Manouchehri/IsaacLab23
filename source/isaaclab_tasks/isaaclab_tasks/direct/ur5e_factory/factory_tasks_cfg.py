@@ -101,9 +101,9 @@ class Peg8mm(HeldAssetCfg):
 class Hole8mm(FixedAssetCfg):
     # usd_path = f"{ASSET_DIR}/factory_hole_8mm.usd"
     # Use local USD file (relative to this config file's directory)
-    usd_path = str(_LOCAL_USD_DIR / "test_factory_hole_8mm.usd")  # TODO
-    diameter = 0.0081
-    height = 0.025
+    usd_path = str(_LOCAL_USD_DIR / "round_hole_7_5mm.usd")  # TODO
+    diameter = 0.0075
+    height = 0.025  # 0.025
     base_height = 0.0
 
 
@@ -160,6 +160,7 @@ class PegInsert(FactoryTask):
         ),
         init_state=ArticulationCfg.InitialStateCfg(
             pos=(0.6, 0.0, 0.05), rot=(1.0, 0.0, 0.0, 0.0), joint_pos={}, joint_vel={}
+            # pos=(0.6, 0.0, 0.05), rot=(0.707, 0.707, 0.0, 0.707), joint_pos={}, joint_vel={}
         ),
         actuators={},
     )

@@ -10,6 +10,7 @@
 import argparse
 import sys
 from distutils.util import strtobool
+import time
 
 from isaaclab.app import AppLauncher
 
@@ -256,6 +257,9 @@ def main(env_cfg: ManagerBasedRLEnvCfg | DirectRLEnvCfg | DirectMARLEnvCfg, agen
 
 if __name__ == "__main__":
     # run the main function
+    start_time = time.time()
     main()
+    end_time = time.time()
+    print(f"\n\n\n\n[INFO] Time taken: {(end_time - start_time) / 60.0} mins \n\n\n\n")
     # close sim app
     simulation_app.close()
