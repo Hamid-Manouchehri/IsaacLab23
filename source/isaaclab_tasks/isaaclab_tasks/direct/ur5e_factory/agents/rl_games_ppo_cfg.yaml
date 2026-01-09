@@ -50,7 +50,7 @@ params:
   load_path: ""
 
   config:
-    name: modified_Factory
+    name: modified_original_Factory_9mm_100Epochs     # TODO
     device: cuda:0
     full_experiment_name: test
     env_name: rlgpu

@@ -101,9 +101,10 @@ class Peg8mm(HeldAssetCfg):
 class Hole8mm(FixedAssetCfg):
     # usd_path = f"{ASSET_DIR}/factory_hole_8mm.usd"
     # Use local USD file (relative to this config file's directory)
-    usd_path = str(_LOCAL_USD_DIR / "round_hole_7_5mm.usd")  # TODO
-    diameter = 0.0075
-    height = 0.025  # 0.025
+    usd_path = str(_LOCAL_USD_DIR / "original_round_hole_9mm" / "original_hole_9mm.usd")  # TODO
+    # diameter = 0.0081
+    diameter = 0.009
+    height = 0.025
     base_height = 0.0
 
 

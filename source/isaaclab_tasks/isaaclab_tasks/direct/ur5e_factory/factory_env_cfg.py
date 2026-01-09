@@ -14,6 +14,8 @@ from isaaclab.utils import configclass
 
 from .factory_tasks_cfg import ASSET_DIR, FactoryTask, GearMesh, NutThread, PegInsert
 
+## ASSET_DIR: http://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/IsaacLab/Factory
+
 OBS_DIM_CFG = {
     "fingertip_pos": 3,
     "fingertip_pos_rel_fixed": 3,
